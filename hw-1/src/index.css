@@ -1,0 +1,56 @@
+:root {
+  --bg-black: #000000;
+  --accent-red: #ff3333;
+  --glow-color: rgba(255, 51, 51, 0.12);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-black);
+  color: white;
+  
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  font-size: 20px; 
+  letter-spacing: 0.5px;
+  
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 65%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.nav-hover-item:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+.social-hover-icon:hover {
+  transform: scale(1.1) !important;
+}
+
+.main-title-hover:hover {
+  transform: scale(1.03);
+}
+
+.main-subtitle-hover:hover {
+  transform: scale(1.05);
+  color: #ff3333 !important;
+}
