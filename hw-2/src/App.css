@@ -1,0 +1,183 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+  width: 100%;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online {
+  background-color: #2ecc71;
+  box-shadow: 0 0 8px #2ecc71;
+}
+
+.status-dot.offline {
+  background-color: #95a5a6;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: #646cff;
+}
+
+.auth-block {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+}
+
+.btn-auth {
+  border-radius: 8px;
+  border: 1px solid #646cff;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.btn-auth:hover {
+  background-color: #646cff;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.catalog-hero {
+  margin-bottom: 40px;
+}
+
+.catalog-hero h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.catalog-hero p {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.badge-sale {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.badge-new {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #fff;
+  padding-right: 60px;
+}
+
+.card p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #646cff;
+  margin-top: auto;
+}
