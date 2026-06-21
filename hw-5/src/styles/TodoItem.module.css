@@ -1,0 +1,123 @@
+.todoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border-radius: 14px;
+  border-left: 4px solid transparent;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  animation: slideIn 0.28s ease-out;
+}
+
+.todoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px -4px rgb(0 0 0 / 0.13);
+}
+
+.low { border-left-color: #86efac; background: linear-gradient(to right, #f0fdf4, #ffffff); }
+.normal { border-left-color: #fde047; background: linear-gradient(to right, #fefce8, #ffffff); }
+.high { border-left-color: #fca5a5; background: linear-gradient(to right, #fff1f2, #ffffff); }
+
+.done {
+  opacity: 0.6;
+  border-left-color: #cbd5e1 !important;
+  background: linear-gradient(to right, #f8fafc, #ffffff) !important;
+}
+
+.done .todoText {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.overdue { 
+  box-shadow: 0 0 0 2px #fca5a5, 0 1px 4px rgb(0 0 0 / 0.08); 
+}
+
+.todoCheckbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.todoCheckbox:checked {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.todoCheckbox:checked::after {
+  content: '✓';
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.todoBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.todoText {
+  font-weight: 500;
+  font-size: 0.97rem;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.todoMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.todoPriority, .todoDue {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.todoDueOverdue {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.deleteButton {
+  flex: none;
+  padding: 6px 10px;
+  background: #fee2e2;
+  color: var(--danger);
+  font-size: 0.85rem;
+  border-radius: 8px;
+  line-height: 1;
+  align-self: flex-start;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background: var(--danger);
+  color: white;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

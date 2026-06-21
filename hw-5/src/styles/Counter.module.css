@@ -1,0 +1,11 @@
+.counter {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+
+.count, .doneCount {
+  color: var(--primary);
+  font-weight: 700;
+}

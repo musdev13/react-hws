@@ -1,0 +1,12 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 0;
+  font-size: 1rem;
+}
