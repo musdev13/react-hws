@@ -81,6 +81,8 @@ else
     exit 1
 fi
 
+rm "clone-hw.sh"
+
 if [ -f "package.json" ]; then
     echo "Running npm install..."
     npm i
