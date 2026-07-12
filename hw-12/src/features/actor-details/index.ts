@@ -1,0 +1,1 @@
+export { ActorDetailsModal } from './ui/ActorDetailsModal';
