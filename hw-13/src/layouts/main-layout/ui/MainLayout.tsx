@@ -1,0 +1,45 @@
+import { Outlet, NavLink, Link } from "react-router";
+
+export function MainLayout() {
+  return (
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900">
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
+        <div className="container mx-auto flex justify-between items-center">
+          <Link to="/" className="text-2xl font-black text-purple-600 hover:text-purple-700 transition">
+            🎬 Actor Explorer
+          </Link>
+          <nav className="flex gap-6 font-medium">
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => 
+                `transition duration-200 hover:text-purple-600 ${
+                  isActive ? "text-purple-600 border-b-2 border-purple-600 pb-1" : "text-gray-600"
+                }`
+              }
+            >
+              Головна
+            </NavLink>
+            <NavLink 
+              to="/favorites" 
+              className={({ isActive }) => 
+                `transition duration-200 hover:text-purple-600 ${
+                  isActive ? "text-purple-600 border-b-2 border-purple-600 pb-1" : "text-gray-600"
+                }`
+              }
+            >
+              Обране
+            </NavLink>
+          </nav>
+        </div>
+      </header>
+
+      <main className="flex-1 container mx-auto py-8 px-6">
+        <Outlet />
+      </main>
+
+      <footer className="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} Actor Explorer. Всі права захищено.</p>
+      </footer>
+    </div>
+  );
+}
