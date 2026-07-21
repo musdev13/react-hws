@@ -1,0 +1,1 @@
+export { tmdbFetch } from "./tmdbClient";
